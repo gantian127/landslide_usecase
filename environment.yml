@@ -1,0 +1,22 @@
+name: landslide-test
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pymt
+  - cdsapi
+  - pymt_topography
+  - numpy
+  - xesmf
+  - xarray
+  - rioxarray
+  - cftime
+  - imageio
+  - ffmpeg
+  - matplotlib
+  - jupyter
+  - pip
+  - pip:
+    - pymt-era5
+    - imageio_ffmpeg
+

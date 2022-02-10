@@ -1,0 +1,8 @@
+bmi-topography:
+  dem_type: 'SRTMGL3'
+  south: 18.02
+  north: 18.32
+  west: -67.13
+  east: -66.13
+  output_format: GTiff
+  cache_dir: "./cache_puerto_rico"
