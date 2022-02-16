@@ -5,7 +5,8 @@
 Landslide susceptibility is the likelihood of a landslide occurring in an area on the basis of local terrain condition 
 to estimate “where” landslides are likely to occur. This repo includes a [Jupyter Notebook](landslide_puertorico.ipynb) 
 to demonstrate how to use several [CSDMS data components](https://csdms.colorado.edu/wiki/DataComponents) to download 
-topography and soil datasets to calculate the landslide susceptibility for a study area in Puerto Rico.
+topography and soil datasets to calculate the landslide susceptibility for a study area in Puerto Rico when Hurricane 
+Maria hit the island on September 20th, 2017.
 
 If you have any suggestion to improve this notebook, please create a github issue 
 [here](https://github.com/gantian127/landslide_usecase/issues).
