@@ -9,10 +9,11 @@ import xesmf as xe
 # installation function
 def install_api_key():
     home_dir = os.path.expanduser('~')
+    work_dir = os.getcwd()
 
     # create Topography API key file
     topo_key = input('Enter Your OpenTopography API Key: ')
-    topo_config_path = os.path.join(home_dir,'.opentopography.txt')
+    topo_config_path = os.path.join(work_dir,'.opentopography.txt')
 
     with open(topo_config_path,'w') as topo_config_file:
         topo_config_file.write(topo_key)
@@ -37,6 +38,7 @@ def regrid_data(src_grid, src_coor, dest_coor, regrid_method='nearest_s2d'):
 
     return dest_grid
 
+
 # calculate subsurface flow function
 def cal_subsurface_flow_depth(soil_depth, soil_water_layer, layer_threshold=[0, 0.07, 0.28, 1, 2]):
     shape = [len(soil_water_layer), *soil_depth.shape]
@@ -53,21 +55,7 @@ def cal_subsurface_flow_depth(soil_depth, soil_water_layer, layer_threshold=[0, 
 
     subsurface_flow_depth = np.sum(water_depth_layer, axis=0)
 
-    #     # plot (testing)
-    #     for i in range(0,4):
-    #         fig, ax = plt.subplots(1,3,figsize=(15,5))
-    #         im1=ax[0].imshow(soil_water_layer[i])
-    #         fig.colorbar(im1, ax=ax[0])
-    #         im2=ax[1].imshow(soil_depth_layer[i])
-    #         fig.colorbar(im2, ax=ax[1])
-    #         im3=ax[2].imshow(water_depth_layer[i])
-    #         fig.colorbar(im3, ax=ax[2])
-
-    #     fig, ax = plt.subplots(figsize=(9,5))
-    #     im=ax.imshow(subsurface_flow_depth)
-    #     fig.colorbar(im, ax=ax)
-
-    return subsurface_flow_depth  # , water_depth_layer, soil_depth_layer
+    return subsurface_flow_depth
 
 
 # define safety factor function
@@ -75,15 +63,6 @@ def cal_safety_factor(slope_angle, subsurface_flow_depth, soil_depth,
                       root_cohesion=5000, soil_cohesion=5000, soil_bulk_density=1300,
                       water_density=1000, gravity_acceleration=9.806,
                       soil_internal_friction_angle=35):
-    """
-    constant parameters
-    root_cohesion = 5000  # Cr (Pa kg/ms2)
-    soil_cohesion = 5000  # Cs (Pa kg/ms2)
-    soil_bulk_density = 1300  # ρs (kg/m3)
-    water_density  = 1000  # ρw (kg/m3)
-    gravity_acceleration = 9.806   # g (m/s2)
-    soil_internal_friction_angle = 35 # φ (degree)
-    """
 
     # calculate tan φ
     tan_fi = np.tan(soil_internal_friction_angle * np.pi / 180)  # tan φ
@@ -101,14 +80,5 @@ def cal_safety_factor(slope_angle, subsurface_flow_depth, soil_depth,
 
     # safety factor
     safety_factor = left_term + right_term
-
-    #     # plot(testing)
-    #     fig, ax = plt.subplots(1,3,figsize=(15,5))
-    #     im1=ax[0].imshow(left_term,vmax=1)
-    #     fig.colorbar(im1, ax=ax[0])
-    #     im2=ax[1].imshow(right_term,vmax=1)
-    #     fig.colorbar(im2, ax=ax[1])
-    #     im3=ax[2].imshow(safety_factor,vmax=1)
-    #     fig.colorbar(im3, ax=ax[2])
 
     return safety_factor
