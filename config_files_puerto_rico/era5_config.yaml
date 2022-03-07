@@ -10,8 +10,7 @@ bmi-era5:
     product_type: reanalysis
     year: 2017
     month: 09
-    day: 
-      - '19'
+    day:
       - '20'
       - '21' 
       - '22'
@@ -47,10 +46,10 @@ bmi-era5:
       - '23:00'
     format: netcdf
     area:
-      - 18.35
-      - -67.25
-      - 18.0
-      - -66.0
+      - 18.30
+      - -66.75
+      - 18.05
+      - -66.25
     grid:
       - 0.25
       - 0.25
