@@ -40,7 +40,7 @@ def regrid_data(src_grid, src_coor, dest_coor, regrid_method='nearest_s2d'):
 
 
 # calculate subsurface flow function
-def cal_subsurface_flow_depth(soil_depth, soil_water_layer, layer_threshold=[0, 0.07, 0.28, 1, 2]):
+def cal_subsurface_flow_depth(soil_depth, soil_water_layer, layer_threshold=[0, 0.07, 0.28, 1, 2], porosity=0.5):
     shape = [len(soil_water_layer), *soil_depth.shape]
     soil_depth_layer = np.empty(shape, soil_depth.dtype)
 
@@ -51,7 +51,7 @@ def cal_subsurface_flow_depth(soil_depth, soil_water_layer, layer_threshold=[0, 
         soil_layer = soil_layer - layer_threshold[i]
         soil_depth_layer[i] = soil_layer
 
-    water_depth_layer = soil_water_layer * soil_depth_layer
+    water_depth_layer = soil_water_layer * soil_depth_layer/porosity
 
     subsurface_flow_depth = np.sum(water_depth_layer, axis=0)
 
