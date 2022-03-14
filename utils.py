@@ -65,10 +65,10 @@ def cal_safety_factor(slope_angle, subsurface_flow_depth, soil_depth,
                       soil_internal_friction_angle=35):
 
     # calculate tan φ
-    tan_fi = np.tan(soil_internal_friction_angle * np.pi / 180)  # tan φ
+    tan_fi = np.tan(soil_internal_friction_angle * np.pi / 180) 
 
-    # calculate relative_wetness
-    relative_wetness = subsurface_flow_depth / soil_depth  # Rw
+    # calculate hw/hs
+    relative_wetness = subsurface_flow_depth / soil_depth 
 
     # left term
     left_term = (root_cohesion + soil_cohesion) / (soil_depth * soil_bulk_density * gravity_acceleration) / np.sin(
