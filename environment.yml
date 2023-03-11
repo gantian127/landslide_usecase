@@ -3,19 +3,18 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
-  - pymt
+  - pymt>=1.3.1
   - cdsapi
   - pymt_topography
-  - numpy
+  - pymt_era5
+  - imageio-ffmpeg
+  - numpy=1.23.5
   - xesmf
   - xarray
   - rioxarray
   - cftime
-  - imageio
+  - imageio>=2.19.1
   - matplotlib
   - jupyter
-  - pip
-  - pip:
-    - pymt-era5
-    - imageio_ffmpeg
-
+  - tqdm
+  
