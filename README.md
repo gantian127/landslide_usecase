@@ -2,23 +2,39 @@
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/gantian127/landslide_usecase/blob/master/LICENSE.txt)
 
 
-Landslide susceptibility is the likelihood of a landslide occurring in an area on the basis of local terrain condition 
-to estimate “where” landslides are likely to occur. This repo includes a [Jupyter Notebook](landslide_puertorico.ipynb) 
-to demonstrate how to use several [CSDMS data components](https://csdms.colorado.edu/wiki/DataComponents) to download 
+This repository includes a [Jupyter Notebook](landslide_puertorico.ipynb) 
+which demonstrates how to use several [CSDMS Data Components](https://csdms.colorado.edu/wiki/DataComponents) to download 
 topography and soil datasets to calculate the landslide susceptibility for a study area in Puerto Rico when Hurricane 
 Maria hit the island on September 20th, 2017.
 
-If you have any suggestion to improve this notebook, please create a github issue 
-[here](https://github.com/gantian127/landslide_usecase/issues).
+This Jupyter Notebook is part of the work for a research paper 
+"CSDMS Data Components: data-model integration tools for Earth surface processes modeling".
 
 
-**Run Notebook**
-
-You can test and run this Jupyter Notebook through 
-[HydroShare](https://www.hydroshare.org/resource/df5fa2f5d1b74be4bf0a049e1e59889c/) or on your local PC.
-
-**Suggested Citation**
-
-Gan, T., Campforts, B., Tucker, G. E., Overeem, I. (2022). Data Component Use Case for Landslide Susceptibility Calculation, HydroShare, https://www.hydroshare.org/resource/df5fa2f5d1b74be4bf0a049e1e59889c/
+### Notebook Citation
+Gan, T., Campforts, B., Tucker, G. E., Overeem, I. (2023). Data Component Use Case for Landslide Susceptibility 
+Calculation, HydroShare, https://www.hydroshare.org/resource/df5fa2f5d1b74be4bf0a049e1e59889c/
 
 
+### Run the Notebook
+You can choose the following methods to run this Jupyter Notebook: 
+
+#### Method 1: HydroShare
+Please go to the [HydroShare Resource](https://www.hydroshare.org/resource/df5fa2f5d1b74be4bf0a049e1e59889c/) 
+and follow the instruction in the **"Abstract"** section to run this notebook.
+
+#### Method 2: CSDMS
+Please go to the [CSDMS EKT Lab](https://csdms.colorado.edu/wiki/Lab-0031) 
+and follow the instruction in **"Lab notes"** section to run this notebook.
+
+
+#### Method 3: Local PC
+Please first download all the files from this repository and have 
+[conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) installed on the local PC.
+Then, use the following commands to create a virtual environment and launch the Jupyter Notebook.
+```
+$ cd landslide_usecase
+$ conda env create --file=environment.yml
+$ conda activate landslide_usecase
+$ jupyter notebook
+```
