@@ -25,7 +25,7 @@ and follow the instruction in the **"Abstract"** section to run this notebook.
 
 #### Method 2: CSDMS
 Please go to the [CSDMS EKT Lab](https://csdms.colorado.edu/wiki/Lab-0031) 
-and follow the instruction in **"Lab notes"** section to run this notebook.
+and follow the instruction in the **"Lab notes"** section to run this notebook.
 
 
 #### Method 3: Local PC
