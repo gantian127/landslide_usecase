@@ -31,7 +31,7 @@ and follow the instruction in the **"Lab notes"** section to run this notebook.
 #### Method 3: Local PC
 Please first download all the files from this repository and have 
 [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) installed on the local PC.
-Then, use the following commands to create a virtual environment and launch the Jupyter Notebook.
+Then, use the following commands to create a virtual environment and launch the Jupyter Notebook. The code below works best on Mac OS or Linux and may cause some errors on Windows.
 ```
 $ cd landslide_usecase
 $ conda env create --file=environment.yml
