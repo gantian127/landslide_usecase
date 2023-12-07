@@ -8,7 +8,7 @@ topography and soil datasets to calculate the landslide susceptibility for a stu
 Maria hit the island on September 20th, 2017.
 
 This Jupyter Notebook is part of the work for a research paper 
-"CSDMS Data Components: data-model integration tools for Earth surface processes modeling".
+["CSDMS Data Components: data-model integration tools for Earth surface processes modeling"](https://doi.org/10.5194/gmd-2023-127).
 
 
 ### Notebook Citation
