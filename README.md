@@ -13,7 +13,7 @@ This Jupyter Notebook is part of the work for a research paper
 
 ### Notebook Citation
 Gan, T., Campforts, B., Tucker, G. E., Overeem, I. (2023). Data Component Use Case for Landslide Susceptibility 
-Calculation, HydroShare, https://www.hydroshare.org/resource/df5fa2f5d1b74be4bf0a049e1e59889c/
+Calculation, HydroShare, https://doi.org/10.4211/hs.df5fa2f5d1b74be4bf0a049e1e59889c
 
 
 ### Run the Notebook
