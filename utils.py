@@ -22,7 +22,7 @@ def install_api_key():
 
     # create CDS API key file
     cds_key = input("Enter Your CDS API Key: ")
-    cds_url = "https://cds.climate.copernicus.eu/api/v2"
+    cds_url = "https://cds.climate.copernicus.eu/api"
     cds_config_content = "url: {} \nkey: {}".format(cds_url, cds_key)
     cds_config_path = os.path.join(home_dir, ".cdsapirc")
 
