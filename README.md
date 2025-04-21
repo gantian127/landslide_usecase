@@ -25,7 +25,7 @@ You can choose the following methods to run this Jupyter Notebook:
 
 [//]: # (and follow the instruction in the **"Abstract"** section to run this notebook.)
 
-#### Method 1: CSDMS
+#### Method 1: CSDMS JupyterHub
 Please go to the [CSDMS EKT Lab](https://csdms.colorado.edu/wiki/Lab-0031) 
 and follow the instruction in the **"Lab notes"** section to run this notebook.
 
